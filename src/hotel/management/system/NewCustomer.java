@@ -118,7 +118,7 @@ public class NewCustomer extends JFrame {
         c1 = new Choice();
         try {
             conn c = new conn();
-            ResultSet rs = c.s.executeQuery("select * from room");
+            ResultSet rs = c.s.executeQuery("select * from room where availability='available'");
             while (rs.next()) {
                 c1.add(rs.getString("roomnumber"));
             }
