@@ -15,10 +15,10 @@ public class HotelManagementSystem extends JFrame implements ActionListener {
         JButton b1;
 
         public HotelManagementSystem() {
-
-                setSize(1366, 430); 
+                setSize(1366, 430);
                 setLayout(null);
-                setLocation(300, 300);
+//                setLocation(300, 300);
+                setLocationRelativeTo(null);
                 setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 l1 = new JLabel("");
                 b1 = new JButton("Next");
@@ -44,6 +44,7 @@ public class HotelManagementSystem extends JFrame implements ActionListener {
                 add(l1);
 
                 b1.addActionListener(this);
+                b1.setFocusable(false);
                 setVisible(true);
 
                 while (true) {
