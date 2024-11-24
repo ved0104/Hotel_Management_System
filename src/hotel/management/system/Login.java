@@ -38,7 +38,7 @@ public class Login extends JFrame implements ActionListener {
         Image i2 = i1.getImage().getScaledInstance(200, 200, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel l3 = new JLabel(i3);
-        l3.setBounds(350, 10, 150, 150);
+        l3.setBounds(325, 10, 150, 150);
         add(l3);
 
         b1 = new JButton("Login");
@@ -61,7 +61,7 @@ public class Login extends JFrame implements ActionListener {
         getContentPane().setBackground(Color.WHITE);
 
         setVisible(true);
-        setSize(600, 300);
+        setSize(500, 230);
 //        setLocation(600, 350);
         setLocationRelativeTo(null);
 

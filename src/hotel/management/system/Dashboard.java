@@ -31,7 +31,7 @@ public class Dashboard extends JFrame {
                 JLabel AirlineManagementSystem = new JLabel("HOTEL EDEN WELCOMES YOU");
                 AirlineManagementSystem.setForeground(Color.WHITE);
                 AirlineManagementSystem.setFont(new Font("Tahoma", Font.PLAIN, 46));
-                AirlineManagementSystem.setBounds(600, 60, 1000, 85);
+                AirlineManagementSystem.setBounds(450, 60, 1000, 85);
                 NewLabel.add(AirlineManagementSystem);
 
                 JMenuBar menuBar = new JMenuBar();

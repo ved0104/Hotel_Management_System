@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package hotel.management.system;
 
 import java.awt.*;
@@ -11,65 +6,57 @@ import java.awt.event.*;
 
 public class HotelManagementSystem extends JFrame implements ActionListener {
 
-        JLabel l1;
-        JButton b1;
+        private JLabel titleLabel;
+        private JButton nextButton;
 
         public HotelManagementSystem() {
-                setSize(1366, 430);
-                setLayout(null);
-//                setLocation(300, 300);
-                setLocationRelativeTo(null);
+                // Frame setup
+                setTitle("Hotel Management System");
+                setSize(1366, 768); // Full HD resolution
                 setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                l1 = new JLabel("");
-                b1 = new JButton("Next");
+                setLocationRelativeTo(null);
+                setLayout(new BorderLayout());
 
-                b1.setBackground(Color.WHITE);
-                b1.setForeground(Color.BLACK);
+                // Background Image
+                ImageIcon backgroundIcon = new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/zero.jpg"));
+                Image scaledImage = backgroundIcon.getImage().getScaledInstance(1366, 768, Image.SCALE_DEFAULT);
+                JLabel backgroundLabel = new JLabel(new ImageIcon(scaledImage));
+                backgroundLabel.setLayout(new BorderLayout());
+                add(backgroundLabel);
 
-                ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/first.jpg"));
-                Image i3 = i1.getImage().getScaledInstance(1366, 390, Image.SCALE_DEFAULT);
-                ImageIcon i2 = new ImageIcon(i3);
-                l1 = new JLabel(i2);
+                // Title Label
+                titleLabel = new JLabel("HOTEL MANAGEMENT SYSTEM", SwingConstants.CENTER);
+                titleLabel.setFont(new Font("Serif", Font.BOLD, 60));
+                titleLabel.setForeground(Color.RED);
+                titleLabel.setOpaque(false);
+                backgroundLabel.add(titleLabel, BorderLayout.NORTH);
 
-                JLabel lid = new JLabel("HOTEL MANAGEMENT SYSTEM");
-                lid.setBounds(30, 300, 1500, 100);
-                lid.setFont(new Font("serif", Font.PLAIN, 70));
-                lid.setForeground(Color.red);
-                l1.add(lid);
+                // Button Panel
+                JPanel buttonPanel = new JPanel();
+                buttonPanel.setOpaque(false);
+                nextButton = new JButton("Next");
+                nextButton.setBackground(Color.WHITE);
+                nextButton.setForeground(Color.BLACK);
+                nextButton.setFont(new Font("Arial", Font.PLAIN, 20));
+                nextButton.addActionListener(this);
+                nextButton.setFocusable(false);
+                buttonPanel.add(nextButton);
+                backgroundLabel.add(buttonPanel, BorderLayout.SOUTH);
 
-                b1.setBounds(1170, 325, 150, 50);
-                l1.setBounds(0, 0, 1366, 390);
-
-                l1.add(b1);
-                add(l1);
-
-                b1.addActionListener(this);
-                b1.setFocusable(false);
+                // Title Blinking Effect
+                Timer blinkTimer = new Timer(500, e -> titleLabel.setVisible(!titleLabel.isVisible()));
+                blinkTimer.start();
                 setVisible(true);
-
-
-                while (true) {
-                        lid.setVisible(false); // lid = j label
-                        try {
-                                Thread.sleep(500); // 1000 = 1 second
-                        } catch (Exception e) {
-                        }
-                        lid.setVisible(true);
-                        try {
-                                Thread.sleep(500);
-                        } catch (Exception e) {
-                        }
-                }
         }
 
+        @Override
         public void actionPerformed(ActionEvent ae) {
+                // Proceed to Login
                 new Login().setVisible(true);
-                this.setVisible(false);
-
+                this.dispose(); // Close current window
         }
 
         public static void main(String[] args) {
-                HotelManagementSystem window = new HotelManagementSystem();
-                window.setVisible(true);
+                SwingUtilities.invokeLater(HotelManagementSystem::new);
         }
 }

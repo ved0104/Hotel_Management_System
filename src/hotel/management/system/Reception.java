@@ -12,9 +12,10 @@ public class Reception extends JFrame {
 
 	public Reception() {
 //		setFocusable(false);
-		setBounds(530, 200, 850, 570);
+		setBounds(530, 200, 850, 600);
 		contentPane = new JPanel();
 		setContentPane(contentPane);
+		setLocationRelativeTo(null);
 		contentPane.setLayout(null);
 
 		ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/fourth.jpg"));
