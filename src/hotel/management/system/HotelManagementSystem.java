@@ -47,6 +47,7 @@ public class HotelManagementSystem extends JFrame implements ActionListener {
                 b1.setFocusable(false);
                 setVisible(true);
 
+
                 while (true) {
                         lid.setVisible(false); // lid = j label
                         try {
