@@ -1,11 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package hotel.management.system;
 
-import java.awt.BorderLayout;
 import java.awt.*;
 
 import java.sql.*;
@@ -14,9 +8,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
-
-//import net.proteanit.sql.DbUtils;
-
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -26,7 +17,6 @@ public class SearchRoom extends JFrame {
 	PreparedStatement pst = null;
 	ResultSet rs = null;
 	private JPanel contentPane;
-	private JTextField txt_Type;
 	private JTable table;
         Choice c1;
 

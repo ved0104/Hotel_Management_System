@@ -1,15 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package hotel.management.system;
 
-import java.awt.BorderLayout;
 import java.awt.*;
 import java.awt.EventQueue;
-
-import javax.swing.border.EmptyBorder;
 
 import java.awt.Font;
 import java.awt.Image;
@@ -24,8 +16,8 @@ public class NewCustomer extends JFrame {
     Connection conn = null;
     PreparedStatement pst = null;
     private JPanel contentPane;
-    private JTextField t1, t2, t3, t4, t5, t6;
-    JComboBox comboBox;
+    private JTextField t1, t2, t3, t5, t6;
+    JComboBox<String> comboBox;
     JRadioButton r1, r2;
     Choice c1;
 
@@ -68,7 +60,7 @@ public class NewCustomer extends JFrame {
         lblId.setBounds(35, 76, 200, 14);
         contentPane.add(lblId);
 
-        comboBox = new JComboBox(new String[]{"Passport", "Aadhaar Card", "Voter Id", "Driving license"});
+        comboBox = new JComboBox<String>(new String[] { "Passport", "Aadhaar Card", "Voter Id", "Driving license" });
         comboBox.setBounds(271, 73, 150, 20);
         contentPane.add(comboBox);
 
@@ -89,7 +81,6 @@ public class NewCustomer extends JFrame {
         t2.setBounds(271, 151, 150, 20);
         contentPane.add(t2);
         t2.setColumns(10);
-
 
         JLabel lblGender = new JLabel("Gender :");
         lblGender.setBounds(35, 191, 200, 14);
@@ -135,7 +126,6 @@ public class NewCustomer extends JFrame {
         lblDeposite.setBounds(35, 359, 200, 14);
         contentPane.add(lblDeposite);
 
-
         t3 = new JTextField();
         t3.setBounds(271, 231, 150, 20);
         contentPane.add(t3);
@@ -178,11 +168,11 @@ public class NewCustomer extends JFrame {
                     String s7 = t5.getText();
                     String s8 = t6.getText();
 
-                    String q1 = "insert into customer values('" + s1 + "','" + s2 + "','" + s3 + "','" + s4 + "','" + s5 + "','" + s6 + "','" + s7 + "','" + s8 + "')";
+                    String q1 = "insert into customer values('" + s1 + "','" + s2 + "','" + s3 + "','" + s4 + "','" + s5
+                            + "','" + s6 + "','" + s7 + "','" + s8 + "')";
                     String q2 = "update room set availability = 'Occupied' where roomnumber = " + s6;
                     c.s.executeUpdate(q1);
                     c.s.executeUpdate(q2);
-
 
                     JOptionPane.showMessageDialog(null, "Data Inserted Successfully");
                     new Reception().setVisible(true);

@@ -1,13 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package hotel.management.system;
 
-import java.awt.BorderLayout;
 import java.awt.*;
-
 import java.sql.*;	
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -21,7 +14,6 @@ public class UpdateCheck extends JFrame {
 	PreparedStatement pst = null;
 	private JPanel contentPane;
 	private JTextField txt_ID;
-	private JTextField txt_Room;
 	private JTextField txt_Status;
 	private JTextField txt_Date;
 	private JTextField txt_Time;
