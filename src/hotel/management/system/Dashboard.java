@@ -28,7 +28,7 @@ public class Dashboard extends JFrame {
                 NewLabel.setBounds(0, 0, 1950, 1000);
                 add(NewLabel);
 
-                JLabel AirlineManagementSystem = new JLabel("THE TAJ GROUP WELCOMES YOU");
+                JLabel AirlineManagementSystem = new JLabel("HOTEL EDEN WELCOMES YOU");
                 AirlineManagementSystem.setForeground(Color.WHITE);
                 AirlineManagementSystem.setFont(new Font("Tahoma", Font.PLAIN, 46));
                 AirlineManagementSystem.setBounds(600, 60, 1000, 85);
