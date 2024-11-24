@@ -39,9 +39,11 @@ public class Reception extends JFrame {
 		btnNewCustomerForm.setBounds(10, 30, 200, 30);
 		btnNewCustomerForm.setBackground(Color.BLACK);
 		btnNewCustomerForm.setForeground(Color.WHITE);
+		btnNewCustomerForm.setFocusable(false);
 		contentPane.add(btnNewCustomerForm);
 
 		JButton btnNewButton = new JButton("Room");
+		btnNewButton.setFocusable(false);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				try {
@@ -61,6 +63,7 @@ public class Reception extends JFrame {
 		contentPane.add(btnNewButton);
 
 		JButton btnNewButton_1 = new JButton("Department");
+		btnNewButton_1.setFocusable(false);
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -81,6 +84,7 @@ public class Reception extends JFrame {
 		contentPane.add(btnNewButton_1);
 
 		JButton btnNewButton_2 = new JButton("All Employee Info");
+		btnNewButton_2.setFocusable(false);
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -102,6 +106,7 @@ public class Reception extends JFrame {
 		contentPane.add(btnNewButton_2);
 
 		JButton btnNewButton_3 = new JButton("Customer Info");
+		btnNewButton_3.setFocusable(false);
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -121,6 +126,7 @@ public class Reception extends JFrame {
 		contentPane.add(btnNewButton_3);
 
 		JButton btnManagerInfo = new JButton("Manager Info");
+		btnManagerInfo.setFocusable(false);
 		btnManagerInfo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -139,6 +145,7 @@ public class Reception extends JFrame {
 		contentPane.add(btnManagerInfo);
 
 		JButton btnNewButton_4 = new JButton("Check Out");
+		btnNewButton_4.setFocusable(false);
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				CheckOut check;
@@ -147,7 +154,6 @@ public class Reception extends JFrame {
 					check.setVisible(true);
 					setVisible(false);
 				} catch (SQLException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
 			}
@@ -159,6 +165,7 @@ public class Reception extends JFrame {
 		contentPane.add(btnNewButton_4);
 
 		JButton btnNewButton_5 = new JButton("Update Check Status");
+		btnNewButton_5.setFocusable(false);
 		btnNewButton_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -177,6 +184,7 @@ public class Reception extends JFrame {
 		contentPane.add(btnNewButton_5);
 
 		JButton btnNewButton_6 = new JButton("Update Room Status");
+		btnNewButton_6.setFocusable(false);
 		btnNewButton_6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -195,6 +203,7 @@ public class Reception extends JFrame {
 		contentPane.add(btnNewButton_6);
 
 		JButton btnPickUpSerice = new JButton("Pick up Service");
+		btnPickUpSerice.setFocusable(false);
 		btnPickUpSerice.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				try {
@@ -213,6 +222,7 @@ public class Reception extends JFrame {
 		contentPane.add(btnPickUpSerice);
 
 		JButton btnSearchRoom = new JButton("Search Room");
+		btnSearchRoom.setFocusable(false);
 		btnSearchRoom.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -231,6 +241,7 @@ public class Reception extends JFrame {
 		contentPane.add(btnSearchRoom);
 
 		JButton btnNewButton_7 = new JButton("Log Out");
+		btnNewButton_7.setFocusable(false);
 		btnNewButton_7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
 				try {
@@ -242,6 +253,7 @@ public class Reception extends JFrame {
 			}
 		});
 		JButton btnNewButton_8 = new JButton("Back");
+		btnNewButton_8.setFocusable(false);
 		btnNewButton_8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
 				try {
